@@ -1,0 +1,9 @@
+services:
+    blewprints:
+        build: .
+        image: blewprints:${BRANCH_NAME:-latest}
+        ports:
+            - "127.0.0.1:${HOST_PORT:-3005}:3000"
+        environment:
+            DEVELOP: "0"
+        restart: always

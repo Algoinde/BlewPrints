@@ -1,0 +1,491 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. emove default margin */
+* {
+	margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		interpolate-size: allow-keywords;
+	}
+}
+
+body {
+	/* 4. Add accessible line-height */
+	line-height: 1.5;
+	/* 5. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+	10. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+/* Base container styles */
+main > content {
+	font-family: 'Vollkorn', Georgia, serif;
+	line-height: 1.6;
+	color: #e1e1e1;
+}
+
+/* Headings */
+main > content h1,
+main > content h2,
+main > content h3,
+main > content h4,
+main > content h5,
+main > content h6 {
+	font-weight: 700;
+	line-height: 1.2;
+	margin-top: 2.5em;
+	margin-bottom: 1em;
+	color: #ffffff;
+}
+
+main > content h1 {
+	font-size: 2.5em;
+	margin-top: 0;
+}
+
+main > content h2 {
+	font-size: 2em;
+	margin: 0;
+}
+main > content > h2 {
+	font-size: 2em;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+main > content h3 {
+	font-size: 1.75em;
+	margin: 0;
+}
+
+main > content h4 {
+	font-size: 1.5em;
+	margin: 0;
+}
+
+main > content h5 {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+main > content h6 {
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+/* Paragraphs */
+main > content p {
+	margin-bottom: 1.5em;
+	font-size: 1.125em;
+}
+
+main > content p:last-child {
+	margin-bottom: 0;
+}
+
+/* Links */
+main > content p a {
+	color: #6bb5ff;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(107, 181, 255, 0.3);
+	transition:
+		border-color 0.2s ease,
+		color 0.2s ease;
+}
+
+main > content p a:hover,
+main > content p a:focus {
+	color: #9ccdff;
+	border-bottom-color: rgba(156, 205, 255, 0.6);
+}
+
+/* Lists */
+main > content ul,
+main > content ol {
+	margin: 0 0 1.5em 2em;
+	padding: 0;
+}
+
+main > content li {
+	margin-bottom: 0.5em;
+	padding-left: 0.25em;
+}
+
+main > content ul ul,
+main > content ol ol,
+main > content ul ol,
+main > content ol ul {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+main > content blockquote {
+	margin: 2em 0;
+	padding: 1em 2em;
+	border-left: 4px solid #6bb5ff;
+	background-color: rgba(107, 181, 255, 0.1);
+	font-style: italic;
+}
+
+main > content blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+/* Code blocks */
+main > content pre {
+	background-color: #2a2a2a;
+	border-radius: 4px;
+	padding: 1em;
+	overflow-x: auto;
+	margin: 1.5em 0;
+	font-family: monospace;
+	font-size: 0.9em;
+	line-height: 1.5;
+}
+
+main > content code {
+	background-color: #2a2a2a;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-family: monospace;
+	font-size: 0.9em;
+	color: #d0d0d0;
+}
+
+main > content pre code {
+	padding: 0;
+	background-color: transparent;
+}
+
+/* Tables */
+main > content table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 2em 0;
+	font-size: 1em;
+}
+
+main > content th {
+	background-color: #333333;
+	border-bottom: 2px solid #4a4a4a;
+	padding: 0.75em;
+	text-align: left;
+	font-weight: 700;
+}
+
+main > content td {
+	border-bottom: 1px solid #3a3a3a;
+	padding: 0.75em;
+}
+
+main > content tr:nth-child(even) {
+	background-color: #222222;
+}
+
+main > content tr:hover {
+	background-color: #2a2a2a;
+}
+
+/* Horizontal rule */
+main > content hr {
+	border: 0;
+	height: 1px;
+	background-color: #3a3a3a;
+	margin: 2.5em 0;
+}
+
+/* Images */
+main > content > img {
+	max-width: 100%;
+	height: auto;
+	margin: 1.5em 0;
+	border-radius: 4px;
+}
+
+main > content > figure {
+	margin: 2em 0;
+}
+
+main > content figcaption {
+	font-size: 0.9em;
+	text-align: center;
+	color: #b0b0b0;
+	margin-top: 0.5em;
+}
+
+/* Definition lists */
+main > content dl {
+	margin: 1.5em 0;
+}
+
+main > content dt {
+	font-weight: 700;
+	margin-top: 1em;
+	color: #ffffff;
+}
+
+main > content dd {
+	margin-left: 2em;
+	margin-bottom: 0.5em;
+}
+
+/* Abbreviations */
+main > content abbr {
+	border-bottom: 1px dotted #b0b0b0;
+	cursor: help;
+}
+
+/* Small text */
+main > content small {
+	font-size: 0.85em;
+	color: #b0b0b0;
+}
+
+/* Mark/highlight */
+main > content mark {
+	background-color: #3a3a00;
+	color: #ffffb0;
+	padding: 0.1em 0.2em;
+}
+
+/* Typography details */
+main > content p + h1,
+main > content p + h2,
+main > content p + h3,
+main > content p + h4,
+main > content p + h5,
+main > content p + h6 {
+	margin-top: 2em;
+}
+
+/* Custom classes for special elements */
+main > content .lead {
+	font-size: 1.25em;
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: 2em;
+	color: #ffffff;
+}
+
+main > content .caption {
+	font-size: 0.9em;
+	color: #b0b0b0;
+	text-align: center;
+	margin-top: -1em;
+	margin-bottom: 1.5em;
+}
+
+/* Pull quotes */
+main > content .pullquote {
+	font-size: 1.4em;
+	line-height: 1.4;
+	font-weight: 500;
+	font-style: italic;
+	width: 80%;
+	margin: 2em auto;
+	color: #6bb5ff;
+	text-align: center;
+}
+
+/* Article metadata */
+main > content .meta {
+	font-size: 0.9em;
+	color: #b0b0b0;
+	margin-bottom: 2em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #333333;
+}

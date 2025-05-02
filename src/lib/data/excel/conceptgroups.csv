@@ -1,0 +1,7 @@
+"#id","Name","Group Items","Column 4","Column 5","Column 6","","","","","","","","","","","","","","","","","","",""
+"upgrades","Upgrades","room:blu002:Entrance Hall","","","","","","","","","","","","","","","","","","","","","","group:upgrades"
+"pairPaintingsPuzzle","Pair Paintings Puzzle","","","","","","","","","","","","","","","","","","","","","","","group:pairPaintingsPuzzle"
+"constellations","Constellations","conc:constellationNorthStar, conc:constellationTheTwins, conc:constellationTheSlice, conc:constellationDiamondusMinor, conc:constellationTheSouthernCross, conc:constellationFarmersApple, conc:constellationClavisTheKey, conc:constellationDiamondusMajor, conc:constellationDraxusTheDead, conc:constellationTheSail, conc:constellationFlorealisBloomOfTheSky, conc:constellationInkWell","","","","","","","","","","","","","","","","","","","","","","group:constellations"
+"constellationGroups","Constellation Groups","conc:constellationGroup*","","","","","","","","","","","","","","","","","","","","","","group:constellationGroups"
+"monkedRooms","Monked Rooms","conc:monkedRoom*","","","","","","","","","","","","","","","","","","","","","","group:monkedRooms"
+"blessings","Blessings","conc:blessing*","","","","","","","","","","","","","","","","","","","","","","group:blessings"
