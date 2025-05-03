@@ -1,6 +1,7 @@
 import 'core-js/proposals/set-methods-v2';
 
 import { Enum } from '$lib/enum';
+import Objects, { resolve } from '.';
 
 export const RoomTagEnum = Enum('RoomTag', {
 	Blueprint: 0,
@@ -98,7 +99,7 @@ export class RoomInstance extends Instance {
 		return this.data.defaultRarity;
 	}
 	get category() {
-		return this.data.category;
+		return this.data.category ?? resolve('room:' + this.baseRoomId)?.category;
 	}
 	get randomSpawnPool() {
 		return this.data._randomSpawnPool.map(resolve).sort(Sort.by('tier')) || [];
@@ -251,6 +252,18 @@ export const upgradeData = new ExcelSchema<RoomInstance>(
 		{
 			key: '_alwaysSpawns',
 			type: Field.commaSeparatedArray
+		},
+		{
+			key: '_conditionalSpawns',
+			type: Field.commaSeparatedArray
+		},
+		{
+			key: '_firstSpawns',
+			type: Field.commaSeparatedArray
+		},
+		{
+			key: 'comment',
+			type: String
 		}
 	],
 	RoomInstance
@@ -259,6 +272,5 @@ export const upgradeData = new ExcelSchema<RoomInstance>(
 // console.log('roomData', roomData);
 // console.log('upgradeData', upgradeData);
 
-import Objects, { resolve } from '.';
 import { Instance } from './lib';
 Objects.room = roomData.merge(upgradeData);

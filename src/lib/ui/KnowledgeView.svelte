@@ -13,7 +13,7 @@
 
 {#if big}
 	<div class="KnowView" class:short>
-		<Knowledge {instance} {link} />
+		<Knowledge {instance} {link} big />
 		<figcaption>{instance.name}</figcaption>
 
 		<p><UnityTextRenderer text={instance.description} /></p>
@@ -36,6 +36,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 1em;
+		user-select: none;
 	}
 
 	.KnowView :global(.Knowledge) {

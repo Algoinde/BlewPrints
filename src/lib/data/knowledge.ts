@@ -22,11 +22,20 @@ export class KnowledgeInstance {
 	get magnifierParsedText() {
 		return this.data.magnifierParsedText;
 	}
+	get pageNum() {
+		return this.data.pageNum;
+	}
 	get comments() {
 		return this.data.comments;
 	}
 	get image() {
 		return `/images/knowledge/${this.id}.webp`;
+	}
+	getImage(index: number) {
+		if (this.pageNum < 2) {
+			return this.image;
+		}
+		return `/images/knowledge/${this.id}${index + 1}.webp`;
 	}
 	get link() {
 		return `/knowledge/${this.id}`;

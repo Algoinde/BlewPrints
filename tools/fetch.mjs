@@ -13,7 +13,7 @@ const SHEETS = [
 ];
 
 const BASE_URL =
-	'https://docs.google.com/spreadsheets/d/1r_iI-CBb-DIu7nupCbckxp7aw5tMMP214y6PDigBvIQ/gviz/tq?tqx=out:csv&sheet=';
+	'https://docs.google.com/spreadsheets/d/1r_iI-CBb-DIu7nupCbckxp7aw5tMMP214y6PDigBvIQ/gviz/tq?tqx=out:csv&test=2&sheet=';
 const OUTPUT_DIR = './src/lib/data/excel';
 
 async function fetchAndSaveSheet(sheetName) {

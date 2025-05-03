@@ -9,10 +9,10 @@
 
 	function icons(t) {
 		return t
-			.replace(/(\\r)?\\n/g, '<br />')
-			.replace(/\\t/g, '    ')
-			.replaceAll('\\', '')
+			.replace(/\\n/g, '<br />')
+			.replace(/\\r/g, '')
 			.replace(/\{([A-Z]+)\}/g, '<span class="gic $1"></span>');
+		// .replaceAll(`\\\\r`, '')
 	}
 
 	const node = $derived(tokenize(text));

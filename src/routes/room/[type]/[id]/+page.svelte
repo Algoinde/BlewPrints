@@ -12,6 +12,8 @@
 
 	const upgrades = $derived(Objects.room.table.filter((upgrade) => upgrade.baseRoomId === room.id));
 	const randomSpawnPool = $derived(room.randomSpawnPool);
+	const alwaysSpawns = $derived(room.alwaysSpawns);
+	const conditionalSpawns = $derived(room.conditionalSpawns);
 	const knowledgeItems = $derived(room.knowledgeItems);
 </script>
 
@@ -28,6 +30,22 @@
 				<h3>Random spawn pool</h3>
 				<div class="items">
 					{#each randomSpawnPool as instance}
+						<Item {instance} link></Item>
+					{/each}
+				</div>
+			{/if}
+			{#if alwaysSpawns.length}
+				<h3>Always spawns</h3>
+				<div class="items">
+					{#each alwaysSpawns as instance}
+						<Item {instance} link></Item>
+					{/each}
+				</div>
+			{/if}
+			{#if conditionalSpawns.length}
+				<h3>Conditional spawn</h3>
+				<div class="items">
+					{#each conditionalSpawns as instance}
 						<Item {instance} link></Item>
 					{/each}
 				</div>
