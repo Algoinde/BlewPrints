@@ -1,43 +1,25 @@
-export class BookInstance {
-	data: any;
-	constructor(o: any) {
-		this.data = o;
-	}
+import { KnowledgeInstance } from './knowledge';
 
-	get id() {
-		return this.data.id;
-	}
-	get name() {
-		return this.data.name;
-	}
-	get location() {
-		return this.data.location;
-	}
-	get description() {
-		return this.data.description;
-	}
-	get parsedText() {
-		return this.data.parsedText;
-	}
-	get numberPages() {
-		return this.data.numberPages;
+export class BookInstance extends KnowledgeInstance {
+	get link() {
+		return `/books/${this.id}`;
 	}
 }
 
 import excel from './excel/books.csv?raw';
 import { ExcelSchema, Field } from './lib/parse';
 
-const bookExcel = new ExcelSchema<BookInstance>(
+import Objects from '.';
+Objects.book = new ExcelSchema<BookInstance>(
 	excel,
 	[
 		{ key: 'id', type: String },
 		{ key: 'name', type: String },
-		{ key: 'location', type: Field.commaSeparatedArray },
+		{ key: '_', type: String },
+		{ key: 'author', type: String },
 		{ key: 'description', type: String },
 		{ key: 'parsedText', type: String },
-		{ key: 'numberPages', type: Number }
+		{ key: 'pageNum', type: Number }
 	],
 	BookInstance
 );
-
-export default bookExcel;

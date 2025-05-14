@@ -45,6 +45,11 @@ export default [
 	{
 		id: 'b',
 		title: 'Books',
-		route: '/book'
+		route: '/books'
+	},
+	{
+		id: 'mjb',
+		title: 'MJB test',
+		route: '/mjb'
 	}
 ] as const satisfies SidebarItem[];
