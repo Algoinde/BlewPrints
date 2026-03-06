@@ -29,7 +29,7 @@
 "stopwatch","An antique silver","Stopwatch","For the next one minute, you will not\nlose {STEP} when entering rooms, {KEY} when opening doors or {GEM} when drafting special rooms.","","FALSE","","2","","","","","","","","","","","","","","","","","","item:stopwatch"
 "treasureMap","","Treasure Map","","","FALSE","","2","","","","","","","","","","","","","","","","","","item:treasureMap"
 "upgradeDisk","A floorplan","Upgrade Disk","Insert into one of the Estate Terminals\nto  <b>permanently</b> upgrade one of\nyour Floorplans.","","FALSE","","2","","","","","","","","","","","","","","","","","","item:upgradeDisk"
-"coffers","","Coffers","","","FALSE","","3","","","","","","","","","","","","","","","","","","item:coffers"
+"coffers","One of the lost (suffix) of Mount Holly","Coffers","","","FALSE","","3","","","","","","","","","","","","","","","","","","item:coffers"
 "vaultKey149","","Vault Key 149","","","FALSE","","3","","","","","","","","","","","","","","","","","","item:vaultKey149"
 "vaultKey233","","Vault Key 233","","","FALSE","","3","","","","","","","","","","","","","","","","","","item:vaultKey233"
 "vaultKey304","","Vault Key 304","","","FALSE","","3","","","","","","","","","","","","","","","","","","item:vaultKey304"
